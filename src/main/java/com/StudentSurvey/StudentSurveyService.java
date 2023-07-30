@@ -48,7 +48,6 @@ public class StudentSurveyService {
         }
 
         if(!Objects.isNull(lastName)){
-            System.out.println("I'm here");
             currentSurvey.setLastName(lastName);
         }
 

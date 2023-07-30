@@ -18,10 +18,9 @@ public class SurveyExceptionHandler {
     @ResponseBody
     public ResponseEntity<ErrorResponse> handleJsonMappingException(JsonMappingException ex) {
         ErrorResponse error = new ErrorResponse();
-
-        // Remove stack trace from error that displays to API user
         error.setMessage("Invalid request data");
         String message = ex.getMessage();
+        // Remove stack trace from error that displays to API user
         int index =  message.indexOf("\n");
         String trimMessage = message.substring(0,index);
 
