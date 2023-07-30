@@ -26,7 +26,7 @@ WORKDIR /app
 COPY --from=builder /app/target/StudentSurvey-0.0.1-SNAPSHOT.jar ./StudentSurvey.jar
 
 # Expose the port your Spring Boot application is running (set in application.properties)
-EXPOSE 8080
+EXPOSE 8082
 
 # Command to run your application
 CMD ["java", "-jar",  "StudentSurvey.jar"]
